@@ -1,23 +1,61 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>jQuery Template</title>
-  <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-  <script>
-    $(function(){ // shorthand for document.ready
-    // code goes here
-   $('h1').click(function(){
-      alert("You clicked a header");
-    });
-    
-    
-    });
-  </script>
+   
+    <title>jQuery Template</title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        $(function() {
+            $("#button").click(function() {
+                var pre = $('input[name="pre"]:checked').val();
+                var name = $("#name").val();
+                $("#bannerName").html(pre + name);
+                var age =$("#age").val();
+                $("#bannerAge").html(age);
+                var color =$("#color").val();
+                $("#banner").css("color", color);
+            });
+        });
+    </script>
+
 </head>
+
 <body>
-<h1>Banner Project </h1>
-  
+    <h1> Nour's Review Chart  </h1>
+
+    <div id="banner">
+        <h1 id="bannerName"></h1>
+        <h2 id="bannerAge"></h2>
+    </div>
+
+
+
+    Please choose one:
+    <br>
+
+    <input type="radio" value="Mr." name="pre"> Mr.
+    <br>
+    <input type="radio" value="Ms." name="pre"> Ms.
+    <br>
+    <br> Name:
+    <br>
+    <input type="text" id="name">
+    <br>
+    <br> Age:
+    <br>
+    <input type="text" id="age">
+    <br>
+    <br> Favorite Color:
+    <br>
+    <input type="text" id="color">
+    <br>
+
+    <br>
+    
+
+    <input type="button" value="Click me!" id="button" >
+
 </body>
+
 </html>
