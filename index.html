@@ -9,13 +9,13 @@
         $(function() {
             $("#button").click(function() {
                 var pre = $('input[name="pre"]:checked').val();
-                var name = $("#name").val();
+                var name = $("#name").val(); //sets a variable to name
                
-                var age =$("#age").val();
+                var age =$("#age").val(); //sets a variable to age
                 
-                var color =$("#color").val();
-                $("#banner").css("color", color);
-                 $("#bannerInfo").html(pre + name+ "'s favorite color is "+color+" and is "+age+" years old.");
+                var color =$("#color").val(); //sets a variable to color
+                $("#banner").css("color", color); //allows banner to be specific color set by user
+                  $("#bannerInfo").html(pre +  name+ " has a favorite color of "+color+" and is "+age+" years old."); // generates a sentence using the values of the inputs 
             });
             
         });
