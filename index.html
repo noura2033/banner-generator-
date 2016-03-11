@@ -10,12 +10,14 @@
             $("#button").click(function() {
                 var pre = $('input[name="pre"]:checked').val();
                 var name = $("#name").val();
-                $("#bannerName").html(pre + name);
+               
                 var age =$("#age").val();
-                $("#bannerAge").html(age);
+                
                 var color =$("#color").val();
                 $("#banner").css("color", color);
+                 $("#bannerInfo").html(pre + name+ "'s favorite color is"+color+" and is "+age+" years old.");
             });
+            
         });
     </script>
 
@@ -25,8 +27,8 @@
     <h1> Nour's Review Chart  </h1>
 
     <div id="banner">
-        <h1 id="bannerName"></h1>
-        <h2 id="bannerAge"></h2>
+        <h1 id="bannerInfo"></h1>
+        
     </div>
 
 
